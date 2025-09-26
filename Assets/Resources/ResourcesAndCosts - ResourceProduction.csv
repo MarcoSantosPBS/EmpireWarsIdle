@@ -1,0 +1,10 @@
+Buiding,Interval to produce,Amount produced,Resource produced
+WoodCutter,5,10,Wood
+IronMine,5,10,IronOre
+ClayPit,5,10,Clay
+Farm,5,10,Food
+Market,5,10,Gold
+Blacksmithing,5,10,Iron
+Blacksmithing,5,10,CastIron
+Blacksmithing,5,10,Steel
+Blacksmithing,5,10,Coal

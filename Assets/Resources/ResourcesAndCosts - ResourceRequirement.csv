@@ -1,0 +1,5 @@
+Resource/Resource,Wood,IronOre,Clay,Food,Gold,Iron,CastIron,Steel,Coal
+Coal,10,0,0,0,0,0,0,0,0
+Iron,0,10,0,0,0,0,0,0,10
+CastIron,0,0,0,0,0,10,0,0,10
+Steel,0,0,0,0,0,0,10,0,10

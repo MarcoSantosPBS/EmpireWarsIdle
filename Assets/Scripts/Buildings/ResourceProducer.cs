@@ -6,6 +6,7 @@ public class ResourceProducer : MonoBehaviour
 {
     [field: SerializeField] public string producerName { get ; private set; }
     [SerializeField] public Requirements[] requirementToBuild;
+    [SerializeField] private BuildingEnum building;
     private Resource[] resources;
 
     private void Awake()

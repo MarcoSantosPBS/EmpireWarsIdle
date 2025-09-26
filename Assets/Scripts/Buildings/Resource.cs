@@ -13,6 +13,14 @@ public class Resource : MonoBehaviour
     public Action<Resource> OnResourceProductionFinished;
     public bool isProducing;
 
+    private void Awake()
+    {
+        BuildingProductionsData data = CSVLoader.ReadBuildingProductions(resourceEnum);
+        requirementToProduce = CSVLoader.ReadResourcesCost(resourceEnum).ToArray();
+        intervalToProduce = data.IntervalToProduce;
+        amountProduced = data.AmountProduced;
+    }
+
     public IEnumerator Produce()
     {
         if (!HasResourcesToProduce()) yield break;

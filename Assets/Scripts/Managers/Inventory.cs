@@ -21,22 +21,25 @@ public class Inventory : MonoBehaviour
 
     public void AddResource(int amount, ResourceEnum resource)
     {
-        InventoryItem resourceItem =  items.First(x => x.Resource == resource);
+        InventoryItem resourceItem =  items.FirstOrDefault(x => x.Resource == resource);
 
+        if (resourceItem == null) { return; }
         resourceItem.AddAmount(amount);
     }
 
     public bool RemoveResource(int amount, ResourceEnum resource)
     {
-        InventoryItem resourceItem = items.First(x => x.Resource == resource);
+        InventoryItem resourceItem = items.FirstOrDefault(x => x.Resource == resource);
 
+        if (resourceItem == null) { return false; }
         return resourceItem.TryToRemoveAmount(amount);
     }
 
     public int GetResourceAmountInInventory(ResourceEnum resource)
     {
-        InventoryItem resourceItem = items.First(x => x.Resource == resource);
+        InventoryItem resourceItem = items.FirstOrDefault(x => x.Resource == resource);
 
+        if (resourceItem == null) { return 0; }
         return resourceItem.Amount;
     }
 

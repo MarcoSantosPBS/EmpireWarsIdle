@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3074067000588827863, guid: e3a409b762694b947897e50d3e4dde27, type: 3}
+      propertyPath: building
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074067000588827863, guid: e3a409b762694b947897e50d3e4dde27, type: 3}
       propertyPath: <producerName>k__BackingField
       value: blacksmithing
       objectReference: {fileID: 0}
@@ -60,11 +64,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8661843967297690813, guid: e3a409b762694b947897e50d3e4dde27, type: 3}
-      propertyPath: resourceEnum
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8661843967297690813, guid: e3a409b762694b947897e50d3e4dde27, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
