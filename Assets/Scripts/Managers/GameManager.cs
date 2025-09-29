@@ -50,7 +50,9 @@ public class GameManager : MonoBehaviour
 
     private void BuildingContainerUI_onAnyClick(ResourceProducer producer)
     {
-        if (_selectedTile != null)
+        if (_selectedTile == null) { return; }
+
+        if (_selectedTile.IsEmpty)
         {
             _selectedTile.SpawnBuilding(producer);
         }
