@@ -12,10 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8158dc312120cf4b83b093ab5f533d2, type: 3}
   m_Name: HugeVillage
   m_EditorClassIdentifier: 
-  timeToComplete: 0
+  timeToComplete: 15
   model:
-    Rewards: []
-    Enemies: []
-  <missionName>k__BackingField: 
-  <missionDescription>k__BackingField: 
-  <missionRewardsDesc>k__BackingField: 
+    Rewards:
+    - resource: 0
+      amount: 200
+    - resource: 1
+      amount: 200
+    - resource: 2
+      amount: 200
+    - resource: 3
+      amount: 200
+    - resource: 4
+      amount: 200
+    Enemies:
+    - resource: 9
+      amount: 1000
+  <missionName>k__BackingField: Huge village
+  <missionDescription>k__BackingField: Raid a huge village
+  <missionRewardsDesc>k__BackingField: A lot of resources

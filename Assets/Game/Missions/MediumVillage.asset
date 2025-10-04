@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToComplete: 10
   model:
-    Rewards: []
-    Enemies: []
+    Rewards:
+    - resource: 0
+      amount: 200
+    - resource: 1
+      amount: 200
+    - resource: 2
+      amount: 200
+    - resource: 3
+      amount: 200
+    Enemies:
+    - resource: 9
+      amount: 100
   <missionName>k__BackingField: Medium Village
   <missionDescription>k__BackingField: Raid a medium village
   <missionRewardsDesc>k__BackingField: A medium amount of resources
