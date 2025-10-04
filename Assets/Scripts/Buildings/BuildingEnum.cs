@@ -5,6 +5,7 @@
     ClayPit,
     Farm,
     Market,
-    Blacksmithing
+    Blacksmithing,
+    Barracks
 }
 
