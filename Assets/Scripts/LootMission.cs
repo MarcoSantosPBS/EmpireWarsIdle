@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using System.Collections.Generic;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "LootMission", menuName = "Missions/LootMission")]
 public class LootMission : ScriptableObject
@@ -9,9 +10,11 @@ public class LootMission : ScriptableObject
     [field: SerializeField] public string missionName { get; private set; }
     [field: SerializeField] public string missionDescription { get; private set; }
     [field: SerializeField] public string missionRewardsDesc { get; private set; }
+    [field: SerializeField] public float RewardMultiplayer { get; private set; }
 
     private float _timeOnMission;
     private bool _isRunning;
+    private LootBattleController _battleController = new LootBattleController();
 
     public void ResetValues()
     {
@@ -50,11 +53,14 @@ public class LootMission : ScriptableObject
         _timeOnMission = 0;
         _isRunning = true;
 
+        _battleController.FillBattleInformations(model.Enemies.ToList());
         LootingManager.Instance.StartMission(this);
     }
 
     public void CompleteMission()
     {
-        LootingManager.Instance.CompleteMission(model.Rewards);
+        _battleController.Fight();
+        var rewards = _battleController.CalculateRewardAmount(RewardMultiplayer, model.Rewards);
+        LootingManager.Instance.CompleteMission(rewards.ToArray());
     }
 }

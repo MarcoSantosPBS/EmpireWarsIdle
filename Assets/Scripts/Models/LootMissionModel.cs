@@ -4,6 +4,6 @@ using UnityEngine;
 [Serializable]
 public class LootMissionModel
 {
-    public ResourceXAmountModel[] Rewards;
+    public ResourceEnum[] Rewards;
     public ResourceXAmountModel[] Enemies;
 }

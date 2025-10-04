@@ -3,13 +3,22 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
+    [field:SerializeField] public UnitModel[] UnitsModels { get; private set; }
     [SerializeField] private LayerMask tileLayer;
 
+    public static GameManager Instance;
     private Camera _camera;
     private Tile _selectedTile;
 
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
         _camera = Camera.main;
     }
 
