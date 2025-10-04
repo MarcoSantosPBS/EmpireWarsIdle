@@ -44,12 +44,12 @@ public static class CSVLoader
         return null;
     }
 
-    public static List<Requirements> ReadResourcesCost(ResourceEnum resourceEnum)
+    public static List<ResourceXAmountModel> ReadResourcesCost(ResourceEnum resourceEnum)
     {
         TextAsset arquivo = Resources.Load<TextAsset>("ResourcesAndCosts - ResourceRequirement");
         string[] allLines = arquivo.text.Split('\n');
 
-        List<Requirements> data = new List<Requirements>();
+        List<ResourceXAmountModel> data = new List<ResourceXAmountModel>();
 
         for (int i = 1; i < allLines.Length; i++)
         {
@@ -63,7 +63,7 @@ public static class CSVLoader
                 if (int.Parse(values[x]) > 0) 
                 {
                     ResourceEnum resourceReq = GetIndexResourceEnum(x);
-                    Requirements requirements = new Requirements()
+                    ResourceXAmountModel requirements = new ResourceXAmountModel()
                     {
                         resource = resourceReq,
                         amount = int.Parse(values[x])

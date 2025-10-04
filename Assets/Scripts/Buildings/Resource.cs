@@ -8,7 +8,7 @@ public class Resource : MonoBehaviour
     [SerializeField] private float intervalToProduce;
     [SerializeField] private int amountProduced;
     [SerializeField] private ResourceEnum resourceEnum;
-    [SerializeField] private Requirements[] requirementToProduce;
+    [SerializeField] private ResourceXAmountModel[] requirementToProduce;
 
     public Action<Resource> OnResourceProductionFinished;
     public bool isProducing;
@@ -57,11 +57,4 @@ public class Resource : MonoBehaviour
 
         return true;
     }
-}
-
-[Serializable]
-public class Requirements
-{
-    public ResourceEnum resource;
-    public int amount;
 }
